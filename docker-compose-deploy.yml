@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    image: sensesis/adcanvas-backend:1.0.10 # 여기 수정
+    container_name: backend
+    restart: always
+    ports:
+      - '8000:8000'
+    networks:
+      - app-network
+
+
+networks:
+  app-network:
+    driver: bridge
