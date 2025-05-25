@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_COMPOSE_FILE = 'docker-compose-deploy.yml'
-        DEPLOY_SERVER="jinkitea@34.64.122.45"
+        DEPLOY_SERVER="jjej02280@34.29.89.164"
     }
 
     stages {
