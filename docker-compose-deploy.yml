@@ -2,15 +2,19 @@ version: '3.8'
 
 services:
   backend:
-    image: sensesis/adcanvas-backend:1.0.10 # 여기 수정
-    container_name: backend
-    restart: always
+    image: sensesis/adcanvas-back:1.0.11  # 최신 이미지 태그 사용
+    container_name: Adcanvas-Backend
     ports:
-      - '8000:8000'
+      - "8000:8000"
+    restart: always
+    env_file:
+      - .env
     networks:
-      - app-network
+      - Adcanvas-Net
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
 
 
 networks:
-  app-network:
-    driver: bridge
+  Adcanvas-Net:
+    external: true
