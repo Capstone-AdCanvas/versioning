@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    image: sensesis/adcanvas-back:1.0.11  # 최신 이미지 태그 사용
+    image: sensesis/adcanvas-back:1.0.12  # 최신 이미지 태그 사용
     container_name: Adcanvas-Backend
     ports:
       - "8080:8080"
